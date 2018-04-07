@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls import include,url
-
+from django import views as myapp
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -25,8 +25,6 @@ from django.contrib import admin
 urlpatterns = [
 	
     url(r'^admin/', include(admin.site.urls)),
-   
-   
-    
-    
+   	url(r'^index/',include('myapp.urls')),
+
 ]
